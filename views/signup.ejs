@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+            function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/JiSlider.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/font-awesome.css" rel="stylesheet"> 
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../static/css/login.css">
+    <style>
+        .button {
+          background-color:aliceblue; 
+          border: none;
+          color: green;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          margin-left: 300px;
+        }
+        </style>
+</head>
+<body>
+    <form action="/signup" method="POST">
+        <br><h1 style="color:white;text-align: center;" >Sign Up</h1><br> 
+        <% if(messages.error) { %>
+            <span><%= messages.error %></span>
+        <% } %>
+        <input type="text" name="name" value="<%= messages.name %>" id="" placeholder="Enter Your name">
+        <input type="email" name="email" value="<%= messages.email %>" id="" placeholder="Enter your email">
+        <input type="password" name="password" id="" placeholder="Enter your password">
+      
+        <button class="button">Submit</button> <br>
+     <a href="/login" class="menu__link menu__item" style="color:white; text-align: center;" ><u>Login</u> | If Already Registered.</a> <br><br>
+        
+    </form>
+<script src="/static/js/value.js"></script>
+<script src="../controllers/authController.js"></script>
+</body>
+</html> 

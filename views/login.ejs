@@ -1,0 +1,43 @@
+<head>
+
+  
+        <title>Code Masters| Home</title>
+        <!-- custom-theme -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Mastering Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+                function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- //custom-theme -->
+        <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../static/css/JiSlider.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" property="" />
+        
+        <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        
+        <!-- font-awesome-icons -->
+        <link href="../static/css/font-awesome.css" rel="stylesheet"> 
+        <!-- //font-awesome-icons -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+   
+        <style>
+            .center {
+  text-align: center;
+}
+            </style>
+</head>
+<body >
+    
+    <form action="/login" method="POST" class="center"  style="background-color: #3E8D41; width:30%;margin-left: 550px;margin-top:150px;" >
+        <br><h1 style="color:white;" >Login</h1><br>
+        <% if(messages.error) { %>
+            <span><%= messages.error %></span>
+        <% } %>
+       <br> <input type="email" name="email" id="" placeholder="E-mail" ><br><br>
+        <input type="password" name="password" id="" placeholder="Password" ><br><br>
+        <input type="submit" value="Login"><br><br>
+     <a href="/signup" class="menu__link menu__item" style="color:white;" ><u>Signup</u> | If Not.</a> <br><br>
+    </form>
+</body>

@@ -1,0 +1,224 @@
+<html>
+<head>
+<title> Python </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Mastering Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../static/css/JiSlider.css" rel="stylesheet"> 
+<link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" property="" />
+
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- font-awesome-icons -->
+<link href="../static/css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../static/css/login.css">
+	<style>
+		h3{
+		font-family:montserrat;
+			text-decoration: underline black;
+			color:blue;
+			}
+		</style>
+</head>
+<body style="background-color:white;" >
+<?php 
+
+include("include/banner.html");
+?>
+
+<img src="../static/images/java.png" width="100%" height="90%" >
+<div class="container">
+<br>
+<br>
+<h3>What is Java?</h3>
+Java is a popular programming language, created in 1995.<br>
+It is owned by Oracle, and more than 3 billion devices run Java.<br>
+It is used for:<br>
+•	Mobile applications (specially Android apps)<br>
+•	Desktop applications<br>
+•	Web applications<br>
+•	Web servers and application servers<br>
+•	Games<br>
+•	Database connection<br>
+•	And much, much more!<br>
+<br>
+<br><h3>Why Use Java?</h3>
+•	Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)<br>
+•	It is one of the most popular programming language in the world<br>
+•	It is easy to learn and simple to use<br>
+•	It is open-source and free<br>
+•	It is secure, fast and powerful<br>
+•	It has a huge community support (tens of millions of developers)<br>
+•	Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs<br>
+•	As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa<br>
+
+<br><h3>Java Data Types</h3>
+As explained in the previous chapter, a variable in Java must be a specified data type:<br>
+Example<br>
+int myNum = 5;               // Integer (whole number)<br>
+float myFloatNum = 5.99f;    // Floating point number<br>
+char myLetter = 'D';         // Character<br>
+boolean myBool = true;       // Boolean<br>
+String myText = "Hello";     // String<br>
+  »
+<br><h3>Data types are divided into two groups:</h3>
+•	Primitive data types - includes byte, short, int, long, float, double, boolean and char<br>
+•	Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)<br>
+<br>
+<br><h3>Primitive Data Types</h3>
+A primitive data type specifies the size and type of variable values, and it has no additional methods.<br>
+There are eight primitive data types in Java:<br>
+Data Type	Size	Description<br>
+byte	1 byte	Stores whole numbers from -128 to 127<br>
+short	2 bytes	Stores whole numbers from -32,768 to 32,767<br>
+int		4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647<br>
+long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807<br>
+float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits<br>
+double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits<br>
+boolean	1 bit	Stores true or false values<br>
+char	2 bytes	Stores a single character/letter or ASCII values<br>
+<br>
+<br><h3>Numbers</h3>
+Primitive number types are divided into two groups:<br>
+Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.
+Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.<br>
+Even though there are many numeric types in Java, the most used for numbers are int (for whole numbers) and double (for floating point numbers). However, we will describe them all as you continue to read.
+<br>
+<br>
+<br><h3>Integer Types</h3>
+<b>Byte</b><br>
+The byte data type can store whole numbers from -128 to 127. This can be used instead of int or other integer types to save memory when you are certain that the value will be within -128 and 127:
+<br>Example<br>
+byte myNum = 100;<br>
+System.out.println(myNum);<br>
+  »
+<b>Short</b><br>
+The short data type can store whole numbers from -32768 to 32767:<br>
+Example<br>
+short myNum = 5000;<br>
+System.out.println(myNum);<br>
+  »
+<b>Int</b><br>
+The int data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.
+<br>Example<br>
+int myNum = 100000;<br>
+System.out.println(myNum);<br>
+  »
+<b>Long</b><br>
+The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an "L":
+<br>Example<br>
+long myNum = 15000000000L;<br>
+System.out.println(myNum);<br>
+  »
+<br>
+<b>Floating Point Types</b><br>
+You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.<br>
+Float<br>
+The float data type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end the value with an "f":<br>
+Example<br>
+float myNum = 5.75f;<br>
+System.out.println(myNum);<br>
+  »
+<b>Double</b><br>
+The double data type can store fractional numbers from 1.7e−308 to 1.7e+308. Note that you should end the value with a "d":<br>
+Example<br>
+double myNum = 19.99d;<br>
+System.out.println(myNum);<br>
+  »
+<b>Use float or double?</b><br>
+The precision of a floating point value indicates how many digits the value can have after the decimal point. The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.
+Scientific Numbers<br>
+A floating point number can also be a scientific number with an "e" to indicate the power of 10:<br>
+Example<br>
+float f1 = 35e3f;<br>
+double d1 = 12E4d;<br>
+System.out.println(f1);<br>
+System.out.println(d1);<br>
+  »
+<br>
+<b>Booleans</b><br>
+A boolean data type is declared with the boolean keyword and can only take the values true or false:<br>
+Example<br>
+boolean isJavaFun = true;<br>
+boolean isFishTasty = false;<br>
+System.out.println(isJavaFun);     // Outputs true<br>
+System.out.println(isFishTasty);   // Outputs false<br>
+  »
+Boolean values are mostly used for conditional testing, which you will learn more about in a later chapter.<br>
+<br>
+<b>Characters</b><br>
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':<br>
+Example<br>
+char myGrade = 'B';<br>
+System.out.println(myGrade);<br>
+  »
+Alternatively, you can use ASCII values to display certain characters:<br>
+Example<br>
+char a = 65, b = 66, c = 67;<br>
+System.out.println(a);<br>
+System.out.println(b);<br>
+System.out.println(c);
+  »<br>
+<b>Tip: A list of all ASCII values can be found in our ASCII Table Reference.</b><br>
+<br>
+<b>Strings</b><br>
+The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:<br>
+Example<br>
+String greeting = "Hello World";<br>
+System.out.println(greeting);<br>
+  »
+The String type is so much used and integrated in Java, that some call it "the special ninth type".<br>
+A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used to perform certain operations on strings. Don't worry if you don't understand the term "object" just yet. We will learn more about strings and objects in a later chapter.
+<br><br><br>
+<b>Non-Primitive Data Types</b><br>
+Non-primitive data types are called reference types because they refer to objects.<br>
+The main difference between primitive and non-primitive data types are:<br>
+•	Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).<br>
+•	Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.<br>
+•	A primitive type has always a value, while non-primitive types can be null.<br>
+•	A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.<br>
+•	The size of a primitive type depends on the data type, while non-primitive types have all the same size.<br>
+Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter.<br>
+
+
+
+</div>
+<br><br>
+<div class="footer">
+	<div class="f-bg-w3l">
+		<div class="container">
+			<div class="col-md-4 w3layouts_footer_grid">
+				<h2>Follow <span>Us</span></h2>
+				<ul class="social_agileinfo">
+					<li><a href="#" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-md-8 w3layouts_footer_grid">
+				
+				<ul class="w3l_footer_nav">
+					
+					<li><a href="/python">Python</a></li>
+					<li><a href="/java">Java </a></li>
+					<li><a href="/data-structure">Data Structures</a></li>
+				</ul>
+				<p>©2021 Code Masters All Rights Reserved.</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

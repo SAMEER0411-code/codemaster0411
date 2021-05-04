@@ -1,0 +1,119 @@
+<head>
+<style>
+
+.main_section_agile{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	height: fit-content;
+	width: 100%;
+	background-color: #ffff;
+}	
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+
+#logout{
+	width: fit-content;
+	height: 35px;
+	position: absolute;
+	top: 0;
+	margin-top: -5px;
+	margin-left:700px;
+	padding: 5px;
+	background-color: green;
+	color:white;
+	text-decoration: none;
+}
+</style>
+
+</head>
+<div class="main_section_agile">
+		<div class="w3_agile_banner_top">
+			<div class="agile_phone_mail">
+				
+				<ul style="float: left;" >
+					<li><i class="fa fa-phone" aria-hidden="true"></i>+91 9876543210</li>
+					
+				</ul>
+				<ul class="agile_forms" style="float: right;" >
+<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:support@codemasters.com">Support@codemasters.com</a></li>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="agileits_ban_banner_nav">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1><a class="navbar-brand" href="index.html"><i>C</i><span>ode</span><i>M</i><span>asters</span></a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav class="menu--iris">
+						<ul class="nav navbar-nav menu__list" >
+							<li class="menu__item menu__item--current"><a href="/index" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="/about" class="menu__link">About</a></li>
+							<li class="menu__item"><a href="/python" class="menu__link">Python</a></li>
+							<li class="menu__item"><a href="/data-structure" class="menu__link">Data Structure</a></li>
+							<li class="menu__item"><a href="/java" class="menu__link">Java</a></li>
+							<li class="menu__item"><a href="/contact" class="menu__link">COntact</a></li>
+
+							<% if(user) { %>
+						
+
+								<form id="logout" action="/logout"  method="POST" style="width: fit-content; height: 35px;">
+									<li><a onclick="document.getElementById('logout').submit()" href="#" style="color:white;" >Logout</a></li>
+								</form>
+							
+								
+								
+
+							<% } else { %>
+							
+							<li class="menu__item"><a href="/login" class="menu__link">Start Quiz</a></li>
+							
+							<% } %>
+							</ul>
+					</nav>
+				</div>
+			</nav>
+		</div>
+</div>
+
+<%- body %>
+
+<main></main>
+<script src="../src/controllers/authController.js"></script>
