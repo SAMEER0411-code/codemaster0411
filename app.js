@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +14,15 @@ const router = require('./routes/auth')
 const MongoStore = require('connect-mongo')
 //const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
+const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
+
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+});
 const connection = mongoose.connection;
 connection.once('open',()=>{
     console.log('Database Connected...');
@@ -63,6 +71,7 @@ app.use('/',router)
 
 
 //SERVER
+
 app.listen(port,()=>{
     console.log(`this is working on port ${port}`)
 })
