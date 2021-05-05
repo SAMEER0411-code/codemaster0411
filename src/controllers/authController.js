@@ -69,7 +69,7 @@ function authController(){
         },
         logout(req,res){
             req.logout()
-            return res.redirect('/index')
+            return res.redirect('/')
         },
         async update(req,res){
             

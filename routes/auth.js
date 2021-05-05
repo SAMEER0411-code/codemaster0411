@@ -13,7 +13,7 @@ router.post('/login',authController().Postlogin)
 
 router.post('/logout',authController().logout)
  
-router.get('/index',baseController().index)
+router.get('/',baseController().index)
 router.get('/about',baseController().about)
 router.get('/contact',baseController().contact)
 router.get('/care',baseController().care)
