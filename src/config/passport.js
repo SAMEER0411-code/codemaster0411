@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/Authmodel')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 
 function init(passport){
