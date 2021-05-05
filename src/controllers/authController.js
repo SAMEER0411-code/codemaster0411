@@ -17,13 +17,13 @@ function authController(){
             }
 
             //Hashed password
-            const hashedPassword = await bcrypt.hash(password,10)
+            //const hashedPassword = await bcrypt.hash(password,10)
 
             //Create a User
             const user =  new User({
-                name:name,
-                email:email,
-                password:hashedPassword,
+                name,
+                email,
+                password,
             })
             
             user.save().then(()=>{
