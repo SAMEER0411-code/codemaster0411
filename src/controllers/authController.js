@@ -20,13 +20,13 @@ function authController(){
 
             //Create a User
             const user =  new User({
-                name,
-                email,
+                name:name,
+                email:email,
                 password:hashedPassword,
             })
             
             user.save().then(()=>{
-                return res.redirect('/signup')
+                return res.redirect('/login')
             }).catch(err=>{
                 req.flash('something went wrong')
                 return res.redirect('/signup')

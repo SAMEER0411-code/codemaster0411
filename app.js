@@ -17,15 +17,17 @@ const router = require('./routes/auth')
 const MongoStore = require('connect-mongo')
 //const Schema = mongoose.Schema;
 
-//mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
-const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
+//DATABASE NAME: CodeMasters
 
-mongoose.connect(dbUrl, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-});
+mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
+//const dbUrl = process.env.DB_URL || 'mongodb://localhost/codemasters';
+
+// mongoose.connect(dbUrl, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false
+// });
 const connection = mongoose.connection;
 connection.once('open',()=>{
     console.log('Database Connected...');
@@ -37,7 +39,7 @@ connection.once('open',()=>{
 app.use(session({
     secret: 'Thisissecret',
     resave:false,
-    store: MongoStore.create({ mongoUrl: 'mongodb://localhost/Codemaster'}),
+    store: MongoStore.create({ mongoUrl: 'mongodb://localhost/CodeMasters'}),
     saveUninitialized: false,
     cookie:{maxAge: 1000 * 60 * 24}    
 }))
