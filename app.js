@@ -22,23 +22,19 @@ const MongoStore = require('connect-mongo')
 //mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
 const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
 
-//  mongoose.connect(dbUrl, {
-//    useNewUrlParser: true,
-//      useCreateIndex: true,
-//    useUnifiedTopology: true,
-//     useFindAndModify: false
-//  });
-// const connection = mongoose.connection;
-// connection.once('open',()=>{
-//     console.log('Database Connected...');
-// }).catch(err=>{
-//     console.log('Connection failed...');
-// })
+ mongoose.connect(dbUrl, {
+   useNewUrlParser: true,
+     useCreateIndex: true,
+   useUnifiedTopology: true,
+    useFindAndModify: false
+ });
+const connection = mongoose.connection;
+connection.once('open',()=>{
+    console.log('Database Connected...');
+}).catch(err=>{
+    console.log('Connection failed...');
+})
 
-mongoose
-     .connect( dbUrl, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
-     .then(() => console.log( 'Database Connected' ))
-     .catch(err => console.log( err ));
 
 //Session Config
 app.use(session({
