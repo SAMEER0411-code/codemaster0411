@@ -34,6 +34,7 @@ connection.once('open',()=>{
 }).catch(err=>{
     console.log('Connection failed...');
 })
+app.use(express.static(path.join(__dirname, 'public')))
 
 //Session Config
 app.use(session({
@@ -64,7 +65,7 @@ app.use((req,res,next)=>{
 
 //Express related stuff
 
-app.use('/static', express.static('static')); //for serving static files
+app.use('/public', express.static('public')); //for serving static files
 app.use(expressLayouts);
 //view
 app.set('view engine', 'ejs'); // set ejs as the template engine
