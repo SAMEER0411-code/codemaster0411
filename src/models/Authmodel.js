@@ -10,6 +10,7 @@ const UserSchema = new Schema({
     password:{type:String, required:true}
 }, {timestamps:true}); 
 
-const UserInfo = mongoose.model('User',UserSchema)
-module.exports = UserInfo
+const UserInfo = mongoose.model('User',UserSchema) //creating the collection with the schema of user
+module.exports = UserInfo //exporting the userinfo
+
 

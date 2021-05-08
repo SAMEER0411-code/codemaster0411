@@ -26,6 +26,6 @@ router.get('/quizthree',baseController().quizthree)
 router.get('/quizone',baseController().quizone)
 
 router.patch('/signup/:id',authController().update) // Update
-router.delete('/signup/:email',authController().gone) // Delete
+router.delete('/signup/:id',authController().gone) // Delete
 
 module.exports = router

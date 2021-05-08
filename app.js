@@ -19,15 +19,15 @@ const MongoStore = require('connect-mongo')
 
 //DATABASE NAME: CodeMasters
 
-mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
-//const dbUrl = process.env.DB_URL || 'mongodb://localhost/codemasters';
+//mongoose.connect('mongodb://localhost/CodeMasters', {useNewUrlParser: true, useUnifiedTopology: true});
+const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
 
-// mongoose.connect(dbUrl, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true,
-//     useFindAndModify: false
-// });
+ mongoose.connect(dbUrl, {
+   useNewUrlParser: true,
+     useCreateIndex: true,
+   useUnifiedTopology: true,
+    useFindAndModify: false
+ });
 const connection = mongoose.connection;
 connection.once('open',()=>{
     console.log('Database Connected...');
@@ -41,7 +41,7 @@ app.use(session({
     resave:false,
     store: MongoStore.create({ mongoUrl: 'mongodb://localhost/CodeMasters'}),
     saveUninitialized: false,
-    cookie:{maxAge: 1000 * 60 * 24}    
+    cookie:{maxAge: 1000 * 60 * 24}  
 }))
 
 //Passport Config
