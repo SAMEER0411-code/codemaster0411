@@ -24,8 +24,8 @@ const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
 
  mongoose.connect(dbUrl, {
    useNewUrlParser: true,
-     useCreateIndex: true,
-   useUnifiedTopology: true,
+    useCreateIndex: true,
+   //useUnifiedTopology: true,
     useFindAndModify: false
  });
 const connection = mongoose.connection;
