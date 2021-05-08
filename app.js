@@ -74,7 +74,7 @@ app.set('views', path.join(__dirname, 'views')) //Set the views directory
 
 
 
-app.use('/index',router)
+app.use('/',router)
 
 
 //SERVER

@@ -4,8 +4,6 @@ const authController = require('../src/controllers/authController')
 const baseController = require('../src/controllers/baseController')
 
 
-router.get('/index',authController().index)
-router.post('/index',authController().index)
 router.get('/signup',authController().signup) //Read
 router.post('/signup',authController().Postsignup) //Create
 
@@ -13,7 +11,8 @@ router.get('/login',authController().login)
 router.post('/login',authController().Postlogin)
 
 router.post('/logout',authController().logout)
-
+ 
+router.get('/',baseController().index)
 router.get('/about',baseController().about)
 router.get('/contact',baseController().contact)
 router.get('/care',baseController().care)
