@@ -25,7 +25,7 @@ const dbUrl = process.env.DB_URL || 'mongodb://localhost/CodeMasters';
  mongoose.connect(dbUrl, {
    useNewUrlParser: true,
     useCreateIndex: true,
-   //useUnifiedTopology: true,
+   useUnifiedTopology: true,
     useFindAndModify: false
  });
 const connection = mongoose.connection;
@@ -70,7 +70,7 @@ app.use(expressLayouts);
 //view
 app.set('view engine', 'ejs'); // set ejs as the template engine
 app.set('views', path.join(__dirname, 'views')) //Set the views directory
-app.use(express.static(path.join(__dirname, 'public')))
+
 
 
 
